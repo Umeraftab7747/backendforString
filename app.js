@@ -5,6 +5,7 @@ const app = express();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const PORT = process.env.PORT || 3000;
 
 const UsersRouter = require("./routes/users");
 
@@ -38,6 +39,6 @@ mongoose
 
 // listen
 
-app.listen(3000, () => {
-  console.log("server is running on localhost:3000");
+app.listen(PORT, () => {
+  console.log(`server is running on ${PORT}`);
 });
